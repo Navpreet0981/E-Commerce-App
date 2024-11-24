@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <include layout="@layout/toolbar" />
+
+    <include layout="@layout/navigation_bar" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_with_blur"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search here" />
+
+    <TextView
+        android:id="@+id/categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchView"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nexaheavy"
+        android:text="Categories"
+        android:textColor="@color/black" />
+
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categories"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/food_RL"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_with_blur">
+
+                <ImageView
+                    android:id="@+id/diet_IV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/diet" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/diet_IV">
+
+                    <TextView
+                        android:id="@+id/food_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/nexaheavy"
+                        android:text="Food"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@+id/food_TV"
+                        android:src="@drawable/baseline_arrow_forward_24" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/property_RL"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_with_blur">
+
+                <ImageView
+                    android:id="@+id/Home_IV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/buy" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/Home_IV">
+
+                    <TextView
+                        android:id="@+id/Home_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/nexaheavy"
+                        android:text="Property"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/Home_TV"
+                        android:src="@drawable/baseline_arrow_forward_24" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/electronic_RL"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_with_blur">
+
+                <ImageView
+                    android:id="@+id/accesory_IV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/electronic" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/accesory_IV">
+
+                    <TextView
+                        android:id="@+id/accesory_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/nexaheavy"
+                        android:text="Electronic"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/accesory_TV"
+                        android:src="@drawable/baseline_arrow_forward_24" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/skin_RL"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_with_blur">
+
+                <ImageView
+                    android:id="@+id/beauty_IV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/beauty" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/beauty_IV">
+
+                    <TextView
+                        android:id="@+id/beauty_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/nexaheavy"
+                        android:text="Skin Care"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/beauty_TV"
+                        android:src="@drawable/baseline_arrow_forward_24" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fashion_RL"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_with_blur">
+
+                <ImageView
+                    android:id="@+id/fashion_IV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/laundry" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/fashion_IV">
+
+                    <TextView
+                        android:id="@+id/fashion_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/nexaheavy"
+                        android:text="Fashion"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/fashion_TV"
+                        android:src="@drawable/baseline_arrow_forward_24" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/kids_RL"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/border_with_blur">
+
+                <ImageView
+                    android:id="@+id/kids_IV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/kids" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/kids_IV">
+
+                    <TextView
+                        android:id="@+id/kids_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/nexaheavy"
+                        android:text="Kids Care"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/kids_TV"
+                        android:src="@drawable/baseline_arrow_forward_24" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/suggestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horizontalScrollView"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nexaheavy"
+        android:text="Suggestions"
+        android:textColor="@color/black" />
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/suggestion">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/card_view_1"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/iphone15_IV"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="200dp"-->
+
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/cart" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@color/black_with_transparency"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="8dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/iphone15_TV"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Image 1 Description"-->
+<!--                                android:textColor="@android:color/white" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/card_view_2"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="200dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/laundry" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@color/black_with_transparency"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="8dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_view_2"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Image 2 Description"-->
+<!--                                android:textColor="@android:color/white" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/card_view_1"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_1"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="200dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/laundry" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@color/black_with_transparency"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="8dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_view_1"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Image 1 Description"-->
+<!--                                android:textColor="@android:color/white" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/card_view_2"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="200dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/laundry" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@color/black_with_transparency"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="8dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_view_2"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Image 2 Description"-->
+<!--                                android:textColor="@android:color/white" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/card_view_1"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_1"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="200dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/laundry" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@color/black_with_transparency"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="8dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_view_1"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Image 1 Description"-->
+<!--                                android:textColor="@android:color/white" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/card_view_2"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="200dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/laundry" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@color/black_with_transparency"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="8dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_view_2"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Image 2 Description"-->
+<!--                                android:textColor="@android:color/white" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/card_view_1"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_1"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="200dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/laundry" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@color/black_with_transparency"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="8dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_view_1"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Image 1 Description"-->
+<!--                                android:textColor="@android:color/white" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/card_view_2"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="200dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/laundry" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@color/black_with_transparency"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="8dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_view_2"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Image 2 Description"-->
+<!--                                android:textColor="@android:color/white" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/card_view_1"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_1"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="200dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/laundry" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@color/black_with_transparency"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="8dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_view_1"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Image 1 Description"-->
+<!--                                android:textColor="@android:color/white" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/card_view_2"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    app:cardCornerRadius="20dp">-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="200dp"-->
+<!--                            android:scaleType="centerCrop"-->
+<!--                            android:src="@drawable/laundry" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="50dp"-->
+<!--                            android:layout_alignParentBottom="true"-->
+<!--                            android:background="@color/black_with_transparency"-->
+<!--                            android:gravity="bottom"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="8dp">-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/text_view_2"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Image 2 Description"-->
+<!--                                android:textColor="@android:color/white" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+
+<!--            </LinearLayout>-->
+
+
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/suggestion">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <include layout="@layout/navigation_bar" />
+
+</RelativeLayout>
